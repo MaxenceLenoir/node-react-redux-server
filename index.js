@@ -9,7 +9,7 @@ require('./models/User');
 require('./models/Survey');
 require('./services/passeport');
 
-mongoose.connect(keys.mongoURI);
+mongoose.connect(keys.mongoURI)
 
 const app = express();
 
@@ -41,4 +41,5 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 const PORT = process.env.PORT || 5000;
+
 app.listen(PORT);
